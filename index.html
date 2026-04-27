@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꿈나무 도서관 🌳</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>📚 꿈나무 도서관 🌳</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-target="home-view" class="nav-btn active">🏠 홈</a></li>
+                <li><a href="#" data-target="story-view" class="nav-btn">📖 스토리</a></li>
+                <li><a href="#" data-target="chatbot-view" class="nav-btn">🤖 챗봇</a></li>
+                <li><a href="#" data-target="game-view" class="nav-btn">🎮 게임</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home View -->
+        <section id="home-view" class="view active">
+            <div class="hero">
+                <h2>환영합니다! 친구들 👋</h2>
+                <p>재미있는 동화도 읽고, 챗봇 친구와 이야기하고, 게임도 즐겨보세요!</p>
+                <div class="quick-links">
+                    <button class="quick-btn" data-target="story-view">동화 읽으러 가기 🏃‍♂️</button>
+                    <button class="quick-btn" data-target="game-view">게임 하러 가기 🕹️</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story View -->
+        <section id="story-view" class="view">
+            <h2>어떤 이야기를 읽어볼까요? 🤔</h2>
+            <div class="story-menu">
+                <div class="story-card" data-story="kongjwi">
+                    <div class="story-icon">🫘</div>
+                    <h3>콩쥐팥쥐</h3>
+                    <p>착한 콩쥐와 심술쟁이 팥쥐 이야기</p>
+                </div>
+                <div class="story-card" data-story="heungbu">
+                    <div class="story-icon">🐦</div>
+                    <h3>흥부와 놀부</h3>
+                    <p>마음씨 고운 흥부와 욕심쟁이 놀부 이야기</p>
+                </div>
+            </div>
+            <div id="story-content-container" class="hidden">
+                <button id="back-to-story-menu">🔙 목록으로 돌아가기</button>
+                <div id="story-reader"></div>
+            </div>
+        </section>
+
+        <!-- Chatbot View -->
+        <section id="chatbot-view" class="view">
+            <h2>도서관 요정 챗봇 🧚‍♀️</h2>
+            <p>콩쥐팥쥐나 흥부놀부에 대해 궁금한 점을 물어보세요!</p>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message bot-message">
+                        안녕! 나는 도서관 요정이야. 콩쥐팥쥐나 흥부와 놀부 이야기 중에서 궁금한 게 있니?
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="여기에 질문을 입력해봐! (예: 콩쥐는 누굴 만났어?)">
+                    <button id="chat-send">보내기 🚀</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game View -->
+        <section id="game-view" class="view">
+            <h2>재미있는 동화 미니게임 🕹️</h2>
+            <div class="game-menu" id="game-menu">
+                <div class="game-card" data-game="kongjwi">
+                    <div class="game-icon">🏺</div>
+                    <h3>콩쥐의 독 채우기</h3>
+                    <p>두꺼비를 도와 물을 채워보자!</p>
+                </div>
+                <div class="game-card" data-game="heungbu">
+                    <div class="game-icon">🎃</div>
+                    <h3>흥부의 박 터뜨리기</h3>
+                    <p>금은보화를 잡아라!</p>
+                </div>
+            </div>
+            
+            <div id="game-container" class="hidden">
+                <button id="back-to-game-menu">🔙 게임 목록으로</button>
+                <div id="game-area">
+                    <!-- Game Canvas or DOM elements will go here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>ⓒ 2026 꿈나무 도서관. 모두가 즐거운 도서관!</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/stories.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
